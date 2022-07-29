@@ -1,0 +1,47 @@
+
+.footer {
+    padding: 45px 0px;
+}
+.footer__container {
+
+}
+.footer__items {
+    column-gap: 50px;
+    row-gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__item {
+
+}
+
+@media (max-width: 1087px) {
+    .healthcare__item:not(:last-child) {
+        margin: 0px 50px 0px 0px;
+    }
+}
+@media (max-width: 991.98px) {
+    .healthcare__items {
+        flex-direction: column;
+    }
+    .healthcare__item:not(:last-child) {
+        margin: 0px 0px 25px 0px;
+    }
+    .item-healthcare_3::after {
+        top: 200px;
+        left: 0px;
+        border-radius: 16px;
+        transform: rotate(45deg);
+    }
+}
+@media (max-width: 767.98px) {
+    .healthcare {
+        padding: 50px 0px 20px 0px;
+    }
+}
+@media (max-width: 524.98px) {
+    .footer__items {
+        flex-direction: column;
+    }
+}

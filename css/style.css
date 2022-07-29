@@ -1,0 +1,133 @@
+/* Обнуление */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+body {
+    font-family: Rubik;
+    font-size: 12px;
+    color: #616161;
+}
+.wrapper {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column; 
+   min-height: 100%;
+}
+.main {
+    flex:1 1 auto ;
+}
+[class*="__container"] {
+    max-width: 1087px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    transition: max-width .3s ease 0s;
+}
+/* PC */
+@media (max-width: 1087px) {
+    [class*="__container"] {
+        max-width: 970px;
+    }
+}
+/* TABLET */
+@media (max-width: 991.98px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+}
+/* MOBILE */
+@media (max-width: 767.98px) {
+    [class*="__container"] {
+        max-width: none;
+    }
+}
+
+/* TEXT */
+.block-text {
+
+}
+.block-text-center {
+    text-align: center;
+}
+.block-text__title  {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 126%;
+    color: #000;
+    opacity: 0;
+    transform: translateY(55px);
+}
+.block-text__title.animation {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all .8s ease 0s;
+}
+
+.block-text__title:not(:last-child) {
+    margin: 0px 0px 12px 0px;
+}
+.block-text__title span {
+    color: #EC5863;
+}
+.block-text__title_blue span {
+    color: #4285F4;
+}
+.block-text__text {
+    line-height: 138.5%;
+    opacity: 0;
+    transform: translateY(75px)
+}
+.block-text__text.animation {
+    transform: translateY(0px);
+    opacity: 1;
+    transition: all .8s ease 0s;
+}
+.block-text__text_mw {
+    max-width: 620px;
+    margin: 0 auto;
+}
+.block-text__text:not(:last-child) {
+    margin: 0px 0px 24px 0px;
+}
+
+@media (max-width: 767.98px) {
+    .block-text__title {
+        font-size: 34px;
+    }
+}
+
